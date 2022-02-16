@@ -7,15 +7,22 @@
       TextInput
  } from 'react-native'
 import colors from '../styles/colors';
+import fonts from '../styles/fonts';
 
  export function UserIdentification(){
     return (
         <SafeAreaView style={styles.container}>
              <View style={styles.content}>
                 <View style={styles.form}>
-                    <Text style={styles.emoji}>
-                    </Text>
-                        😄     
+                   <Text style={styles.emoji}>
+                       😄 
+                    </Text> 
+
+                    <Text style={styles.title}>
+                        Como podemos{'\n'}
+                        chamar você?
+                    </Text>   
+
                     <TextInput
                        style={styles.input}
                     />
@@ -54,6 +61,14 @@ import colors from '../styles/colors';
          marginTop: 50,
          padding: 10,
          textAlign: 'center'
+     },
+     title: {
+         fontSize:24,
+         lineHeight: 32,
+         textAlign:'center',
+         color: colors.heading,
+         fontFamily: fonts.heading,
+         marginTop:20
      }
 
  })
