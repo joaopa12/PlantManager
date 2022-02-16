@@ -16,13 +16,11 @@ import fonts from '../styles/fonts';
                 <View style={styles.form}>
                    <Text style={styles.emoji}>
                        😄 
-                    </Text> 
-
+                    </Text>
                     <Text style={styles.title}>
                         Como podemos{'\n'}
                         chamar você?
                     </Text>   
-
                     <TextInput
                        style={styles.input}
                     />
