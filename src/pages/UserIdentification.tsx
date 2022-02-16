@@ -15,7 +15,7 @@ import colors from '../styles/colors';
                 <View style={styles.form}>
                     <Text style={styles.emoji}>
                     </Text>
-
+                        😄     
                     <TextInput
                        style={styles.input}
                     />
