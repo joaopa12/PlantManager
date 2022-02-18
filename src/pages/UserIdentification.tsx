@@ -20,6 +20,7 @@ import fonts from '../styles/fonts';
                     <Text style={styles.title}>
                         Como podemos{'\n'}
                         chamar você?
+                        Teste
                     </Text>   
                     <TextInput
                        style={styles.input}
