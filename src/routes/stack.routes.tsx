@@ -1,12 +1,18 @@
 import React from "react";
 import { createStackNavigator } from '@react-navigation/stack'
 
-import colors from "../src/styles/colors";
-import { Welcome } from "../src/pages/Welcome";
-import { UserIdentification } from "../src/pages/UserIdentification";
-import { Confirmation } from "../src/pages/Confirmation";
+import colors from "../styles/colors";
+import { Welcome } from "../pages/Welcome";
+import { UserIdentification } from "../pages/UserIdentification";
+import { Confirmation } from "../pages/Confirmation";
 
 const stackRoutes = createStackNavigator();
+
+export type RootStackParamList = {
+    Home: undefined;
+    Profile: { userId: string };
+    Feed: { sort: 'latest' | 'top' } | undefined;
+  };
 
 const AppRoutes: React.FC = () => (
     <stackRoutes.Navigator screenOptions={{

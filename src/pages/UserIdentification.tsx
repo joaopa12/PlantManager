@@ -13,6 +13,7 @@ import { Button } from '../components/Button';
 
 import colors from '../styles/colors';
 import fonts from '../styles/fonts';
+import { useNavigation } from '@react-navigation/core'
 
  export function UserIdentification(){
     const[isFocused, setIsFocused] = useState(false)
@@ -32,7 +33,18 @@ import fonts from '../styles/fonts';
         setName(value);
 
     }
+    type Nav = {
+        navigate: (value: string) => void;
+    }
+
+    const navigation = useNavigation<Nav>();
+
+    function handleSubmit() {
+        navigation.navigate('Confirmation')
+    }
+
     return (
+        
         <SafeAreaView style={styles.container}>
              <KeyboardAvoidingView 
              style={styles.container}
@@ -61,7 +73,9 @@ import fonts from '../styles/fonts';
                        onChangeText={handleInputChange}
                     />
                     <View style={styles.footer}>
-                    <Button/>
+                    <Button 
+                    title='Confirmar'
+                    onPress={handleSubmit}/>
                     </View> 
                 </View>
              </View>
