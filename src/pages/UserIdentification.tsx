@@ -6,6 +6,8 @@
       Text,
       TextInput,
       KeyboardAvoidingView,
+      TouchableWithoutFeedback,
+      Keyboard,
       Platform
  } from 'react-native'
 
@@ -50,6 +52,7 @@ import { useNavigation } from '@react-navigation/core'
              style={styles.container}
              behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
              >
+             <TouchableWithoutFeedback onPress={Keyboard.dismiss}> 
              <View style={styles.content}>
                 <View style={styles.form}>
                     <View style={styles.header}>
@@ -79,6 +82,7 @@ import { useNavigation } from '@react-navigation/core'
                     </View> 
                 </View>
              </View>
+             </TouchableWithoutFeedback>  
              </KeyboardAvoidingView>
         </SafeAreaView>
     )
