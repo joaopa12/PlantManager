@@ -1,7 +1,7 @@
 import React from 'react';
 import AppLoading from 'expo-app-loading'
 
-import { UserIdentification } from './src/pages/UserIdentification';
+import { Confirmation } from './src/pages/Confirmation';
 import {
   useFonts,
   Jost_400Regular,
@@ -17,7 +17,7 @@ export default function App() {
   if(!fontsLoaded) return <AppLoading/> 
 
   return (
-     <UserIdentification />
+     <Confirmation />
   )
 }
 
