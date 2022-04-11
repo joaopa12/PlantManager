@@ -1,5 +1,5 @@
 import React from "react";
-import { View, StyleSheet, Text } from "react-native";
+import { View, StyleSheet, Text, FlatList } from "react-native";
 import colors from "../styles/colors";
 
 import { Header } from "../components/Header";
@@ -15,8 +15,13 @@ export function PlantSelect() {
         <Text style={styles.title}>Em qual ambiente</Text>
         <Text style={styles.subtitle}>você quer colocar sua planta?</Text>
       </View>
-
-      <EnviromentButton title="Cozinha"/>
+      
+      <View>
+        <FlatList data={[1,2,3,4,5]} renderItem={() => (
+          <EnviromentButton title="Cozinha"/>
+        )} horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.enviromentList} />
+      </View>
+      
 
     </View>
   );
@@ -43,4 +48,11 @@ const styles = StyleSheet.create({
     lineHeight: 20,
     color: colors.heading,
   },
+  enviromentList: {
+    height: 40,
+    justifyContent: "center",
+    paddingBottom: 5,
+    marginLeft: 32,
+    marginVertical: 32
+  }
 });
