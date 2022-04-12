@@ -5,6 +5,6 @@ const api = axios.create({
 })
 
 //iniciar api
-//json-server ./src/services/server.json --host 192.168.29.69 --port 3333 
+//json-server ./src/services/server.json --host 192.168.29.69 --port 3333 --delay 2000
 
 export default api;
