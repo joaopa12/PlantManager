@@ -14,7 +14,9 @@ export function Header() {
         <Text style={styles.userName}>João</Text>
       </View>
 
-      <Image source={userimg} style={styles.image}/>
+      <Image source={{
+        uri: 'https://avatars.githubusercontent.com/u/66539788?v=4'
+      }} style={styles.image}/>
     </View>
   );
 }
